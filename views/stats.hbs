@@ -1,0 +1,76 @@
+{{> menu id="stats"}}
+
+<section>
+<div class="ui raised segment">
+    <h3>All Links currently stored:</h3>
+    <div class="ui massive blue label">
+        {{ linkCount }}
+    </div>
+</div>
+</section>
+<section>
+<div class="ui raised segment">
+    <h3>All Linklists currently stored:</h3>
+    <div class="ui massive blue label">
+        {{ linkListCount }}
+    </div>
+</div>
+</section>
+<section>
+<div class="ui raised segment">
+    <h3>My Linklists currently stored:</h3>
+    <div class="ui massive blue label">
+        {{ myLinkListCount }}
+    </div>
+</div>
+</section>
+<section>
+    <div class="ui raised segment">
+        <h3> My Links currently stored:</h3>
+        <div class="ui massive blue label">
+            {{ myLinkCount }}
+        </div>
+    </div>
+</section>
+<section>
+    <div class="ui raised segment">
+        <h3> Most Links:</h3>
+        <div class="ui massive blue label">
+            {{ mostlinks.title }}
+        </div>
+        <div class="ui massive blue label">
+            {{mostlinks.count }}
+        </div>
+    </div>
+</section>
+<section>
+    <div class="ui raised segment">
+        <h3> Least Links:</h3>
+        <div class="ui massive blue label">
+            {{ leastlinks.title }}
+        </div>
+        <div class="ui massive blue label">
+            {{leastlinks.count }}
+        </div>
+    </div>
+</section>
+<section>
+    <div class="ui raised segment">
+        <h3> Average links per user:</h3>
+        <div class="ui massive blue label">
+            {{ avgLinks }}
+        </div>
+    </div>
+</section>
+<section>
+    <div class="ui raised segment">
+        <h3> Most links in list:</h3>
+        <div class="ui massive blue label">
+            {{ mostUserLists.users }}
+        </div>
+        <div class="ui massive blue label">
+            {{ mostUserLists.count }}
+        </div>
+    </div>
+</section>
+</section>

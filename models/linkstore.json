@@ -1,0 +1,48 @@
+{
+  "linkCollection": [
+    {
+      "id": "bccb4046-53a7-4c60-af0d-d35678215705",
+      "userid": "2b6f0989-7b7f-4a38-ad26-aa06b922d751",
+      "title": "marge likes homer",
+      "links": [
+        {
+          "id": "e6781267-25e4-4612-b100-63665ba3251a",
+          "title": "Marge loves lisa",
+          "link": "https://www.mathgames.com",
+          "sum": "Lisa"
+        }
+      ]
+    },
+    {
+      "id": "e2db57ed-5015-465a-84de-44425e3fd7b7",
+      "userid": "d399e1d9-c4f2-4ff0-b4e1-93c6a09467cb",
+      "title": "Cool reddit links!",
+      "links": []
+    },
+    {
+      "id": "c207bfa0-0f2a-4816-99a6-48cba5591b98",
+      "userid": "3ad52697-6d98-4d80-8273-084de55a86c0",
+      "title": "Homer likes doughnuts ",
+      "links": [
+        {
+          "id": "68906bbf-4cca-4f65-ad4c-a3477843498e",
+          "title": "Google",
+          "link": "https://www.google.ie",
+          "sum": "Google"
+        },
+        {
+          "id": "1fa5eb8d-65df-4355-af8d-dbb0b7216e12",
+          "title": "MMMMM Doughnuts",
+          "link": "https://www.doughnuts.com",
+          "sum": "I like doughnuts"
+        }
+      ]
+    },
+    {
+      "id": "c8751e34-9d39-42db-9f21-9251fcf547a9",
+      "userid": "3ad52697-6d98-4d80-8273-084de55a86c0",
+      "title": "Homer also like duff",
+      "links": []
+    }
+  ]
+}

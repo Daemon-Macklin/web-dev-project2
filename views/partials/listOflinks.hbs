@@ -1,0 +1,23 @@
+
+<section class="ui segment">
+ <div class="ui stackable equal width two column grid container">
+  {{#each linklist.links}}
+  <div class="column">
+   <div class="row">
+    <div class="ui card">
+     <div class="content">  
+      <h2>
+       <a href="{{link}}" target="_blank">{{title}}</a>
+       </h2>
+        <p>
+        {{sum}}
+        </p>
+         <a href="/linklist/{{../linklist.id}}/deletelink/{{id}}"> <i class="bordered inverted red trash icon"></i>
+         </a>
+      </div>
+     </div>
+    </div>
+   </div> 
+{{/each}}
+ </div>
+</section>

@@ -1,0 +1,19 @@
+<section class="ui raised segment">
+    <div class="ui small dividing header"> Picture Upload </div>
+    <section class="ui raised form segment">
+        <form action="/dashboard/uploadpicture" method="post" enctype="multipart/form-data">
+            <div class="two fields">
+                <div class="field">
+                    <label>First Name</label>
+                    <input type="file" name="picture">  </input>
+                </div>
+                <div class="field">
+                    <label>Title</label>
+                    <input placeholder="Title" type="text" name="title">
+                </div>
+            </div>
+            <button class="ui blue submit button"> Upload </button>
+            <a href="/dashboard/deleteallpictures"> <button class="negative ui button">Delete All</button></a>
+        </form>
+    </section>
+</section>

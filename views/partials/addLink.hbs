@@ -1,0 +1,22 @@
+<form class="ui stacked segment form" action="/linklist/{{linklist.id}}/addlink" method="POST">
+  <div class="two fields">
+    <div class="field">
+      <label>Title</label>
+      <input placeholder="Title" type="text" name="title">
+    </div>
+    <div class="field">
+      <label>Link</label>
+       <div class="ui labeled input">
+        <div class="ui label">
+         https://
+        </div>
+      <input placeholder="www.coolwebsite.ie" type="text" name="link">
+     </div>
+    </div>
+  </div>
+  <div class="field">
+    <label>Summary</label>
+      <input placeholder="A short discription of the webpage" type="text" name="sum">
+  </div> 
+  <button class="ui blue submit button">Add Link</button>
+</form>
