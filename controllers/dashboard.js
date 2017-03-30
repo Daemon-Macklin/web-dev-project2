@@ -34,6 +34,7 @@ const dashboard = {
     		id: uuid(),
 			userid: loggedInUser.id,
     		title: request.body.title,
+            public: false,
     		links:[],
     	};
     	linkstore.addLinkList(newLinkList);
@@ -57,6 +58,20 @@ const dashboard = {
     deletePicture(request, response) {
         const loggedInUser = userStore.getCurrentUser(request.cookies.linklist);
         pictureStore.deletePicture(loggedInUser.id, request.query.img);
+        response.redirect('/dashboard');
+    },
+
+    makePublic(request, response){
+        const linklistId = request.params.id;
+        const linklist = linkstore.getLinklist(linklistId);
+        linklist.public = true;
+        response.redirect('/dashboard');
+    },
+
+    makePrivate(request, response){
+        const linklistId = request.params.id;
+        const linklist = linkstore.getLinklist(linklistId);
+        linklist.public = false;
         response.redirect('/dashboard');
     },
 

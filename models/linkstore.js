@@ -13,6 +13,21 @@ const linkstore = {
   	return this.store.findAll(this.collection);
   },
 
+  getLinklist(linklistId){
+      return this.store.findOneBy(this.collection,{id: linklistId})
+  },
+
+  getPublicLists(){
+    const allLists = this.store.findAll(this.collection);
+    const publicLists = {};
+     for(let i = 0; i < allLists.length; i++){
+         if(allLists[i].public){
+             publicLists[i] = allLists[i];
+         }
+     }
+     return publicLists;
+  },
+
   getLink(id){
   	return this.store.findOneBy(this.collection, {id: id});
   },
