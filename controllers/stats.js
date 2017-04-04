@@ -18,6 +18,7 @@ const stats = {
             leastlinks : linkstore.leastLinks(),
             avgLinks : linkstore.averageLinks(),
             mostUserLists : linkstore.mostUserLists(),
+            leastUserLists: linkstore.leastUserLists(),
         };
         response.render('stats', viewData);
     },

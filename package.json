@@ -11,7 +11,6 @@
     "cloudinary": "^1.8.0",
     "cookie-parser": "^1.4.3",
     "express": "^4.14.0",
-    "express-fileupllad": "^0.1.2",
     "express-fileupload": "^0.1.2",
     "express-handlebars": "^3.0.0",
     "lodash": "^4.17.3",

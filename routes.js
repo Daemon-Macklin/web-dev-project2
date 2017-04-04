@@ -10,6 +10,7 @@ const linklist = require('./controllers/linklist.js');
 const accounts = require ('./controllers/accounts.js');
 const stats = require ('./controllers/stats.js');
 const view = require('./controllers/view.js');
+const viewlinklist = require('./controllers/viewlinklist.js');
 
 router.get('/', accounts.index);
 router.get('/login', accounts.login);
@@ -20,6 +21,7 @@ router.get('/about', about.index);
 router.get('/linklist/:id', linklist.index);
 router.get('/stats', stats.index);
 router.get('/view', view.index);
+router.get('/viewlinklist/:id', viewlinklist.index);
 router.get('/linklist/:id/deletelink/:linkid', linklist.deleteLink);
 router.get('/dashboard/deletelinklist/:id', dashboard.deleteLinkList);
 router.get('/dashboard/deleteallpictures', dashboard.deleteAllPictures);
