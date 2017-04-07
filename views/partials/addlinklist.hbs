@@ -1,7 +1,11 @@
-<form class="ui stacked segment form" action="/dashboard/addlinklist" method="POST">
+<form class="ui stacked segment form" action="/dashboard/addlinklist" method="POST" enctype="multipart/form-data">
   <div class="field">
     <label>Title</label>
     <input placeholder="Cool Webpages!!" type="text" name="title">
   </div>
-  <button class="ui blue submit button">Add Category</button>
+    <div class="field">
+        <label>Cover Photo</label>
+        <input type="file" name="cover">
+    </div>
+    <button class="ui blue submit button">Add LinkList</button>
 </form>

@@ -8,6 +8,7 @@ const linkstore = require('../models/linkstore.js');
 const pictureStore = require('../models/picturestore.js');
 
 const dashboard = {
+
   index(request, response) {
     logger.info('dashboard rendering');
     const loggedInUser = userStore.getCurrentUser(request.cookies.linklist);
@@ -38,19 +39,21 @@ const dashboard = {
     		links:[],
     	};
     	linkstore.addLinkList(newLinkList);
+    	dashboard.uploadCover(request,newLinkList.id);
     	logger.debug("Adding linklist ${linklistId}");
-    	response.redirect('/dashboard');
+        response.redirect('/dashboard');
     },
 
-    uploadPicture(request, response) {
+
+    uploadCover(request, id){
         const loggedInUser = userStore.getCurrentUser(request.cookies.linklist);
-        pictureStore.addPicture(loggedInUser.id, request.body.title, request.files.picture, function () {
-            response.redirect('/dashboard');
-        });
+        pictureStore.addCover(loggedInUser.id, id,request.files.cover, function () {
+        })
     },
+
 
     deleteAllPictures(request, response) {
-        const loggedInUser = accounts.getCurrentUser(request.cookies.linklist);
+        const loggedInUser = userStore.getCurrentUser(request.cookies.linklist);
         pictureStore.deleteAllPictures(loggedInUser.id);
         response.redirect('/dashboard');
     },

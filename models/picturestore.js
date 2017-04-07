@@ -17,22 +17,14 @@ catch(e) {
 
 const pictureStore = {
 
-    store: new JsonStore('./models/picturestore.json', { pictures: [] }),
+    store: new JsonStore('./models/picturestore.json', {pictures: []}),
     collection: 'pictures',
 
-    getAlbum(userid) {
-        return this.store.findOneBy(this.collection, { userid: userid });
+    getAllPictures(){
+        return this.store.findAll(this.collection);
     },
 
-    addPicture(userId, title, imageFile, response) {
-        let album = this.getAlbum(userId);
-        if (!album) {
-            album = {
-                userid: userId,
-                photos: [],
-            };
-            this.store.add(this.collection, album);
-        }
+    addCover(id, title, imageFile, response){
 
         imageFile.mv('tempimage', err => {
             if (!err) {
@@ -41,8 +33,9 @@ const pictureStore = {
                     const picture = {
                         img: result.url,
                         title: title,
+                        listid: id,
                     };
-                    album.photos.push(picture);
+                    this.store.add(this.collection, picture);
                     response();
                 });
             }
@@ -52,24 +45,21 @@ const pictureStore = {
     deletePicture(userId, image) {
         const id = path.parse(image);
         let album = this.getAlbum(userId);
-        _.remove(album.photos, { img: image });
+        _.remove(album.photos, {img: image});
         cloudinary.api.delete_resources([id.name], function (result) {
             console.log(result);
         });
     },
 
-    deleteAllPictures(userId) {
-        let album = this.getAlbum(userId);
-        if (album) {
-            album.photos.forEach(photo => {
-                const id = path.parse(photo.img);
-                cloudinary.api.delete_resources([id.name], result => {
-                    console.log(result);
-                });
-            });
-            this.store.remove(this.collection, album);
+    findCover(linkId){
+        const pictures = this.store.findAll(this.collection);
+        const linklist = linkstore.getAllLinklists();
+        for(let i = 0; i > pictures.length; i++){
+            if(pictures[i].listId == linkId){
+                linklist.linkId['img']=  pictures[i].img;
+            }
         }
-    },
+    }
 };
 
 module.exports = pictureStore;

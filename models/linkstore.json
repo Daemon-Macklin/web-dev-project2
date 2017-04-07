@@ -1,52 +1,18 @@
 {
   "linkCollection": [
     {
-      "id": "b15555bc-0ab1-4080-a9fa-6efc62989885",
+      "id": "9fcfb034-5dfd-4dc9-9059-e13a863bafe8",
       "userid": "3ad52697-6d98-4d80-8273-084de55a86c0",
-      "title": "Cool",
-      "public": true,
-      "links": [
-        {
-          "id": "d52d3559-973a-4330-b090-848692b06e0c",
-          "title": "Google",
-          "link": "https://www.google.ie",
-          "sum": "It's google"
-        }
-      ]
-    },
-    {
-      "id": "5ce63556-47ac-4a3d-9b8b-056fc1a8067f",
-      "userid": "d399e1d9-c4f2-4ff0-b4e1-93c6a09467cb",
-      "title": "Cool reddit links!",
-      "public": true,
-      "links": []
-    },
-    {
-      "id": "f9d1aa61-3f48-4750-9bc8-4b09e9be128b",
-      "userid": "d399e1d9-c4f2-4ff0-b4e1-93c6a09467cb",
-      "title": "Cool memes",
+      "title": "Mat tweet",
       "public": false,
       "links": [
         {
-          "id": "a3c350ae-c2df-4b3d-919d-3e6e7c280afd",
-          "title": "Cool doge ",
+          "id": "f157865b-14a2-40cb-af7f-5b97a7061b51",
+          "title": "Coole ",
           "link": "https://www.doge.com",
-          "sum": "Cool doggos"
-        },
-        {
-          "id": "566e0eae-c1c9-4272-beaa-369fa3d4f7e8",
-          "title": "Meme world",
-          "link": "https://www.dankmemes.com",
-          "sum": "Pepepeehefa"
+          "sum": "djhdkljfhsdjkf"
         }
       ]
-    },
-    {
-      "id": "3ed7a477-1463-4a9f-88dc-32f591c1aa5a",
-      "userid": "d399e1d9-c4f2-4ff0-b4e1-93c6a09467cb",
-      "title": "Dank memes",
-      "public": true,
-      "links": []
     }
   ]
 }
