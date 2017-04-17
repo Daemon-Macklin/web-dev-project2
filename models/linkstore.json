@@ -1,18 +1,12 @@
 {
   "linkCollection": [
     {
-      "id": "9fcfb034-5dfd-4dc9-9059-e13a863bafe8",
+      "id": "868cd0d4-4c6f-4ee1-a418-ff06bdbd036b",
       "userid": "3ad52697-6d98-4d80-8273-084de55a86c0",
-      "title": "Mat tweet",
+      "title": "fffff",
       "public": false,
-      "links": [
-        {
-          "id": "f157865b-14a2-40cb-af7f-5b97a7061b51",
-          "title": "Coole ",
-          "link": "https://www.doge.com",
-          "sum": "djhdkljfhsdjkf"
-        }
-      ]
+      "image": "",
+      "links": []
     }
   ]
 }

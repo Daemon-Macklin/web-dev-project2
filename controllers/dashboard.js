@@ -15,7 +15,7 @@ const dashboard = {
     const viewData = {
       title: 'Bookmarked links',
       links: linkstore.getUserLinkList(loggedInUser.id),
-        album: pictureStore.getAlbum(loggedInUser.id),
+        cover: linkstore.getCover(),
     };
      logger.info('about to render', linkstore.getAllLinklists());
     response.render('dashboard', viewData);
@@ -36,6 +36,7 @@ const dashboard = {
 			userid: loggedInUser.id,
     		title: request.body.title,
             public: false,
+    		image :"",
     		links:[],
     	};
     	linkstore.addLinkList(newLinkList);
@@ -51,18 +52,6 @@ const dashboard = {
         })
     },
 
-
-    deleteAllPictures(request, response) {
-        const loggedInUser = userStore.getCurrentUser(request.cookies.linklist);
-        pictureStore.deleteAllPictures(loggedInUser.id);
-        response.redirect('/dashboard');
-    },
-
-    deletePicture(request, response) {
-        const loggedInUser = userStore.getCurrentUser(request.cookies.linklist);
-        pictureStore.deletePicture(loggedInUser.id, request.query.img);
-        response.redirect('/dashboard');
-    },
 
     makePublic(request, response){
         const linklistId = request.params.id;

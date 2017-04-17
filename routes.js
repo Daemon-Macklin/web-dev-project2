@@ -24,8 +24,6 @@ router.get('/view', view.index);
 router.get('/viewlinklist/:id', viewlinklist.index);
 router.get('/linklist/:id/deletelink/:linkid', linklist.deleteLink);
 router.get('/dashboard/deletelinklist/:id', dashboard.deleteLinkList);
-router.get('/dashboard/deleteallpictures', dashboard.deleteAllPictures);
-router.get('/dashboard/deletepicture', dashboard.deletePicture);
 router.get('/dashboard/makepublic/:id', dashboard.makePublic);
 router.get('/dashboard/makeprivate/:id', dashboard.makePrivate);
 router.post('/linklist/:id/addlink', linklist.addLink);
@@ -33,7 +31,7 @@ router.post('/dashboard/addlinklist', dashboard.addLinkList);
 router.post('/about/addcomment', about.addComment);
 router.post('/register', accounts.register);
 router.post('/authenticate', accounts.authenticate);
-router.post('/dashboard/uploadpicture', dashboard.uploadPicture);
+
 
 
 module.exports = router;
