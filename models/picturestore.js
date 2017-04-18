@@ -26,21 +26,22 @@ const pictureStore = {
     },
 
     addCover(userid, id, imageFile, response){
-        imageFile.mv('tempimage', err => {
-            if (!err) {
-                cloudinary.uploader.upload('tempimage', result => {
-                    console.log(result);
-                    const picture = {
-                        img: result.url,
-                        userid: userid,
-                        listid: id,
-                    };
-                    this.store.add(this.collection, picture);
-                });
-                linkstore.getCover();
-                response();
-            }
-        });
+        if (imageFile) {
+            imageFile.mv('tempimage', err => {
+                if (!err) {
+                    cloudinary.uploader.upload('tempimage', result => {
+                        console.log(result);
+                        const picture = {
+                            img: result.url,
+                            userid: userid,
+                            listid: id,
+                        };
+                        this.store.add(this.collection, picture);
+                    });
+                    response();
+                }
+            });
+        }
     },
 
     deletePicture(userId, image) {

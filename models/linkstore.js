@@ -35,16 +35,14 @@ const linkstore = {
   	return this.store.findOneBy(this.collection, {id: id});
   },
 
-  getCover(){
-    const linklist = this.getAllLinklists();
+  getCover(id){
+    const linklist = this.getLinklist(id);
     const cover = picture.getAllPictures();
-    for(let i =0; i < linklist.lenght; i ++){
-        for(let j = 0; j <cover.length; j ++){
-            if(linklist[i].id = cover[j].listid){
-                linklist[i].image = cover[j].img;
-            }
-        }
-    }
+     for(let i =0; i < cover.length; i++){
+         if(id = cover[i].listid){
+             linklist['image'] = cover[i].img;
+         }
+     }
   },
 
   removeLink(id, linkId){

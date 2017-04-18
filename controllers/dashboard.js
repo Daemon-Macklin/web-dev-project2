@@ -15,7 +15,6 @@ const dashboard = {
     const viewData = {
       title: 'Bookmarked links',
       links: linkstore.getUserLinkList(loggedInUser.id),
-        cover: linkstore.getCover(),
     };
      logger.info('about to render', linkstore.getAllLinklists());
     response.render('dashboard', viewData);
@@ -36,11 +35,12 @@ const dashboard = {
 			userid: loggedInUser.id,
     		title: request.body.title,
             public: false,
-    		image :"",
+    		image:"",
     		links:[],
     	};
     	linkstore.addLinkList(newLinkList);
     	dashboard.uploadCover(request,newLinkList.id);
+        linkstore.getCover(newLinkList.id);
     	logger.debug("Adding linklist ${linklistId}");
         response.redirect('/dashboard');
     },
