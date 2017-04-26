@@ -25,22 +25,26 @@ const pictureStore = {
         return this.store.findAll(this.collection);
     },
 
-    addCover(userid, id, imageFile, response){
+    addCover(userid, id, imageFile, uploaded){
+        let image = "http://res.cloudinary.com/dman1924/image/upload/v1493217606/dobk8safogw6y8tzx3ms.png";
+        let picture = {};
+
         if (imageFile) {
             imageFile.mv('tempimage', err => {
                 if (!err) {
                     cloudinary.uploader.upload('tempimage', result => {
                         console.log(result);
-                        const picture = {
-                            img: result.url,
-                            userid: userid,
-                            listid: id,
-                        };
-                        this.store.add(this.collection, picture);
-                    });
-                    response();
+                        picture['img'] = result.url;
+                        picture['userid'] = userid;
+                        picture['listid'] = id;
+                        image = result.url;
+                        uploaded(image);
+                    })
                 }
             });
+        }
+        else if(!imageFile){
+            uploaded(image);
         }
     },
 

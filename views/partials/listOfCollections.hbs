@@ -3,13 +3,16 @@
     {{#each links}}
     <div class="column">
      <div class="row">
-      <section class="ui raised segment">
+      <section class="ui raised center aligned meta segment">
        <h2 class="ui centered header">
          {{title}}
        </h2>
        <h3 class="ui centered header">
          Number of links: {{links.length}}
         </h3>
+          <div>
+          <img src="{{image}}" height="200" width="200">
+          </div>
          <a href="/linklist/{{id}}" class="ui icon ">
            <i class="blue large tag icon"></i> 
           </a>

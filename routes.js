@@ -14,6 +14,7 @@ const viewlinklist = require('./controllers/viewlinklist.js');
 
 router.get('/', accounts.index);
 router.get('/login', accounts.login);
+router.get('/start', start.index);
 router.get('/signup', accounts.signup);
 router.get('/logout', accounts.logout);
 router.get('/dashboard', dashboard.index);

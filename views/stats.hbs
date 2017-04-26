@@ -1,96 +1,87 @@
 {{> menu id="stats"}}
-
-<section class="ui raised segment">
-<div class="ui wide stackable doubling centered grid">
-    <div class="three wide column">
-          <div class="ui fluid card">
-              <div class="content">
-                  <h3>All Links currently stored:</h3>
-                  <div class="ui massive blue label">
-                      {{ linkCount }}
-                  </div>
-              </div>
-          </div>
-          <div class="ui fluid card">
-              <div class="content">
-                  <h3>All Linklists currently stored:</h3>
-                  <div class="ui massive blue label">
-                    {{ linkListCount }}
-                  </div>
-              </div>
-          </div>
-          <div class="ui fluid card">
-              <div class="content">
-                  <h3>My Linklists currently stored:</h3>
-                  <div class="ui massive blue label">
-                      {{ myLinkListCount }}
-                  </div>
-              </div>
-          </div>
-    </div>
-      <div class="three wide column">
-        <div class="ui fluid card">
-            <div class="content">
-                <h3> My Links currently stored:</h3>
-                <div class="ui massive blue label">
-                    {{ myLinkCount }}
+<section class="ui stackable three column grid">
+    <section class="ui column">
+        <div class="ui horizontal statistics">
+            <div class="statistic">
+                <div class="value">
+                    {{linkCount}}
+                </div>
+                <div class="label">
+                    All Links currently stored
+                </div>
+            </div>
+            <div class="statistic">
+                <div class="value">
+                    {{linkListCount}}
+                </div>
+                <div class="label">
+                    All Linklists Currently Stored
+                </div>
+            </div>
+            <div class="statistic">
+                <div class="value">
+                    {{ myLinkListCount }}
+                </div>
+                <div class="label">
+                    My links lists Currently Stored
                 </div>
             </div>
         </div>
-        <div class="ui fluid card">
-            <div class="content">
-                <h3> Most Links:</h3>
-                <div class="ui massive blue label">
-                    <p>
-                    {{ mostlinks.title }}:
-                    {{mostlinks.count }}
-                    </p>
-                </div>
+    </section>
+    <section class="ui column">
+    <div class="ui horizontal statistics">
+        <div class="statistic">
+            <div class="value">
+                {{myLinkCount}}
+            </div>
+            <div class="label">
+                All My Links Currently Stored
             </div>
         </div>
-        <div class="ui fluid card">
-            <div class="content">
-                <h3> Least Links:</h3>
-                <div class="ui massive blue label">
-                    <p>
-                    {{ leastlinks.title}}:
-                    {{leastlinks.count }}
-                    </p>
-                </div>
+        <div class="statistic">
+            <div class="value">
+                {{ mostlinks.title }}
+            </div>
+            <div class="label">
+                Most Links
+            </div>
+        </div>
+        <div class="statistic">
+            <div class="value">
+                {{ leastlinks.title}}
+            </div>
+            <div class="label">
+                Least Links
             </div>
         </div>
     </div>
-    <div class="three wide column">
-        <div class="ui fluid card">
-            <div class="content">
-                    <h3> Average links per user:</h3>
-                    <div class="ui massive blue label">
-                        {{ avgLinks }}
-                    </div>
-            </div>
-        </div>
-            <div class="ui fluid card">
-                <div class="content">
-                    <h3> User with most Links:</h3>
-                    <div class="ui massive blue label">
-                        <p>
-                        {{ mostUserLists.name }}:
-                        {{ mostUserLists.highest }}
-                        </p>
-                    </div>
+    </section>
+    <section class="ui column">
+        <div class="ui horizontal statistics">
+            <div class="statistic">
+                <div class="value">
+                    {{avgLinks}}
+                </div>
+                <div class="label">
+                    Average Links per user
                 </div>
             </div>
-            <div class="ui fluid card">
-                <div class=" content">
-                        <h3> User with least Links:</h3>
-                        <div class="ui massive blue label">
-                            <p>
-                            {{ leastUserLists.name }}:
-                            {{ leastUserLists.lowest }}
-                            </p>
-                        </div>
+            <div class="statistic">
+                <div class="value">
+                    {{ mostUserLists.name }}
+                </div>
+                <div class="label">
+                    User With Most Links
+                </div>
+            </div>
+            <div class="statistic">
+                <div class="value">
+                    {{ leastUserLists.name }}
+                </div>
+                <div class="label">
+                    User with Least Links
                 </div>
             </div>
         </div>
-</div>
+    </section>
 </section>

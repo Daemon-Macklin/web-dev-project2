@@ -1,10 +1,16 @@
  <section class="ui piled segment">
   <h2> Comments </h2>
-  <div class="ui relaxed celled list">
+  <div class="ui list">
    {{#each comments }}
-   <div class="item">
-   {{ comment}}
-   </div>
+       <div class ="ui card">
+           <div class="ui header">
+               {{userName.firstName}}
+           </div>
+           <div class="item">
+               {{comment}}
+           </div>
+       </div>
    {{/each}}
   </div>
+
   </section>

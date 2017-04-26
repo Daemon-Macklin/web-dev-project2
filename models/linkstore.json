@@ -1,3 +1,35 @@
 {
-  "linkCollection": []
+  "linkCollection": [
+    {
+      "id": "7b57f5b0-fb57-4bcf-92e8-cf354f332251",
+      "userid": "3ad52697-6d98-4d80-8273-084de55a86c0",
+      "title": "Cool folder",
+      "public": true,
+      "image": "http://res.cloudinary.com/dman1924/image/upload/v1493217606/dobk8safogw6y8tzx3ms.png",
+      "links": []
+    },
+    {
+      "id": "2b25d6d2-d556-4f51-9eb7-6cb0e5ee8d1e",
+      "userid": "3ad52697-6d98-4d80-8273-084de55a86c0",
+      "title": "Hockey links",
+      "public": true,
+      "image": "http://res.cloudinary.com/dman1924/image/upload/v1493218249/z4xgmwi02sn0owo5xqik.png",
+      "links": [
+        {
+          "id": "b1c4aea0-7fac-458e-9a80-ddb2c2ec6e0b",
+          "title": "Ottawa Senators Website",
+          "link": "https://www.nhl.com/senators",
+          "sum": "Website for the best team in the national hockey league "
+        }
+      ]
+    },
+    {
+      "id": "ab95f43d-412d-4edd-b42d-ae2b552ed2e4",
+      "userid": "3ad52697-6d98-4d80-8273-084de55a86c0",
+      "title": "Cool mems ",
+      "public": false,
+      "image": "http://res.cloudinary.com/dman1924/image/upload/v1493217606/dobk8safogw6y8tzx3ms.png",
+      "links": []
+    }
+  ]
 }

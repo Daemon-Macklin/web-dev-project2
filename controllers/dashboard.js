@@ -30,26 +30,25 @@ const dashboard = {
 
     addLinkList(request, response){
         const loggedInUser = userStore.getCurrentUser(request.cookies.linklist);
-    	const newLinkList={
-    		id: uuid(),
-			userid: loggedInUser.id,
-    		title: request.body.title,
-            public: false,
-    		image:"",
-    		links:[],
-    	};
-    	linkstore.addLinkList(newLinkList);
-    	dashboard.uploadCover(request,newLinkList.id);
-        linkstore.getCover(newLinkList.id);
-    	logger.debug("Adding linklist ${linklistId}");
-        response.redirect('/dashboard');
+        let listId = uuid();
+        pictureStore.addCover(loggedInUser.id, listId, request.files.cover, function(image) {
+            const newLinkList={
+                id: listId,
+                userid: loggedInUser.id,
+                title: request.body.title,
+                public: false,
+                image: image,
+                links:[],
+            };
+            linkstore.addLinkList(newLinkList);
+            logger.debug("Adding linklist ${linklistId}");
+            response.redirect('/dashboard');
+        });
     },
 
 
     uploadCover(request, id){
-        const loggedInUser = userStore.getCurrentUser(request.cookies.linklist);
-        pictureStore.addCover(loggedInUser.id, id,request.files.cover, function () {
-        })
+
     },
 
 
