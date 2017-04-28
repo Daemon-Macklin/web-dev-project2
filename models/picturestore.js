@@ -37,6 +37,7 @@ const pictureStore = {
                         picture['img'] = result.url;
                         picture['userid'] = userid;
                         picture['listid'] = id;
+                        this.store.add(this.collection, picture);
                         image = result.url;
                         uploaded(image);
                     })

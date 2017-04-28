@@ -3,11 +3,8 @@
   <div class="ui list">
    {{#each comments }}
        <div class ="ui card">
-           <div class="ui header">
-               {{userName.firstName}}
-           </div>
-           <div class="item">
-               {{comment}}
+           <div class="ui left aligned item">
+               <b>{{userName.firstName}}</b>: {{comment}}
            </div>
        </div>
    {{/each}}
