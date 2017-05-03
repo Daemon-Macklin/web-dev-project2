@@ -27,6 +27,7 @@ router.get('/linklist/:id/deletelink/:linkid', linklist.deleteLink);
 router.get('/dashboard/deletelinklist/:id', dashboard.deleteLinkList);
 router.get('/dashboard/makepublic/:id', dashboard.makePublic);
 router.get('/dashboard/makeprivate/:id', dashboard.makePrivate);
+router.get('/view/like/:id', view.like);
 router.post('/linklist/:id/addlink', linklist.addLink);
 router.post('/dashboard/addlinklist', dashboard.addLinkList);
 router.post('/about/addcomment', about.addComment);

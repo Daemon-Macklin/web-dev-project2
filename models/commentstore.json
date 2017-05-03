@@ -19,6 +19,16 @@
         "password": "secret",
         "id": "3ad52697-6d98-4d80-8273-084de55a86c0"
       }
+    },
+    {
+      "comment": "Do comments still work?",
+      "userName": {
+        "firstName": "Daemon",
+        "lastName": "Macklin",
+        "email": "daemon1@live.ca",
+        "password": "Daemon123",
+        "id": "d399e1d9-c4f2-4ff0-b4e1-93c6a09467cb"
+      }
     }
   ]
 }

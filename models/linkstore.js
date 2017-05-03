@@ -69,10 +69,8 @@ const linkstore = {
   getLinkCount() {
     const linklist = this.getAllLinklists();
     let count = 0;
-
      for (let i = 0; i < linklist.length; i++){
-
-     	count += linklist[i].links.length;
+         count += linklist[i].links.length;
      	}
      return count; 
     },
@@ -129,7 +127,7 @@ const linkstore = {
     averageLinks(){
       const links = this.getLinkCount();
       const linkLists = this.getLinkListCount();
-      return links/linkLists;
+      return (links/linkLists).toFixed(2);
     },
 
     mostUserLists(){
@@ -169,7 +167,6 @@ const linkstore = {
         }
         return leastUser;
     },
-
 
     getUserLinkList(userid){
         return this.store.findBy(this.collection, { userid: userid });

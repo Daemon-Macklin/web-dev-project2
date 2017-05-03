@@ -7,7 +7,9 @@ const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
 const app = express();
 const exphbs = require('express-handlebars');
+const path = require('path');
 
+app.use(express.static(path.join(__dirname, '/stylesheets')));
 app.use(bodyParser.urlencoded({ extended: false, }));
 app.use(express.static('public'));
 app.use(fileUpload());

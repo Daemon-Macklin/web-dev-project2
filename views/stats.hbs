@@ -1,8 +1,16 @@
 {{> menu id="stats"}}
+<section class ="ui inverted yellow segment">
+<section class ="ui center aligned segment">
+    <p>
+        Welcome to the statistics page!<br>
+        This is where you can see a whole bunch of numbers that represent how the site is doing!
+    </p>
+</section>
+<section class="ui segment">
 <section class="ui stackable three column grid">
     <section class="ui column">
-        <div class="ui horizontal statistics">
-            <div class="statistic">
+        <div class="ui small horizontal statistics">
+            <div class="ui small statistic">
                 <div class="value">
                     {{linkCount}}
                 </div>
@@ -10,7 +18,7 @@
                     All Links currently stored
                 </div>
             </div>
-            <div class="statistic">
+            <div class="ui small statistic">
                 <div class="value">
                     {{linkListCount}}
                 </div>
@@ -18,7 +26,7 @@
                     All Linklists Currently Stored
                 </div>
             </div>
-            <div class="statistic">
+            <div class="ui small statistic">
                 <div class="value">
                     {{ myLinkListCount }}
                 </div>
@@ -29,8 +37,8 @@
         </div>
     </section>
     <section class="ui column">
-    <div class="ui horizontal statistics">
-        <div class="statistic">
+    <div class="ui small horizontal statistics">
+        <div class="ui small statistic">
             <div class="value">
                 {{myLinkCount}}
             </div>
@@ -38,7 +46,7 @@
                 All My Links Currently Stored
             </div>
         </div>
-        <div class="statistic">
+        <div class="ui small statistic">
             <div class="value">
                 {{ mostlinks.title }}
             </div>
@@ -46,7 +54,7 @@
                 Most Links
             </div>
         </div>
-        <div class="statistic">
+        <div class="ui small statistic">
             <div class="value">
                 {{ leastlinks.title}}
             </div>
@@ -57,8 +65,8 @@
     </div>
     </section>
     <section class="ui column">
-        <div class="ui horizontal statistics">
-            <div class="statistic">
+        <div class="ui small horizontal statistics">
+            <div class="ui small statistic">
                 <div class="value">
                     {{avgLinks}}
                 </div>
@@ -66,7 +74,7 @@
                     Average Links per user
                 </div>
             </div>
-            <div class="statistic">
+            <div class="ui small statistic">
                 <div class="value">
                     {{ mostUserLists.name }}
                 </div>
@@ -74,7 +82,7 @@
                     User With Most Links
                 </div>
             </div>
-            <div class="statistic">
+            <div class="ui small statistic">
                 <div class="value">
                     {{ leastUserLists.name }}
                 </div>
@@ -84,4 +92,6 @@
             </div>
         </div>
     </section>
+</section>
+</section>
 </section>

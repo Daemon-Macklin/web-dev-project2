@@ -38,6 +38,7 @@ const dashboard = {
                 title: request.body.title,
                 public: false,
                 image: image,
+                likes: [],
                 links:[],
             };
             linkstore.addLinkList(newLinkList);

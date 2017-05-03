@@ -1,9 +1,10 @@
- <section class="ui segment">
-  <div class="ui stackable equal width two column grid container">
+ <section class="ui inverted yellow segment">
+  <div class="ui stackable equal width three column grid container">
     {{#each links}}
     <div class="column">
      <div class="row">
-      <section class="ui raised center aligned meta segment">
+      <section class="ui raised center aligned meta card">
+          <div class="ui center aligned content">
        <h2 class="ui centered header">
          {{title}}
        </h2>
@@ -25,6 +26,7 @@
           <a href="/dashboard/makeprivate/{{id}}" class="ui icon">
               <i class="bordered inverted green cloud download icon"></i>
           </a>
+          </div>
          </section>
         </div>
       </div>

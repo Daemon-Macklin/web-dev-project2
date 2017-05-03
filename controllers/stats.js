@@ -5,7 +5,6 @@ const linkstore = require('../models/linkstore.js');
 
 const stats = {
     index(request, response) {
-
         const currentUser = request.cookies.linklist;
         logger.info('about rendering');
         const viewData = {
